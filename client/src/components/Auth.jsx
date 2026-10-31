@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Auth.css";
+import { API_BASE_URL } from "../config";
 
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = `${API_BASE_URL}/api/auth`;
 
 export default function Auth({ onAuthenticated }) {
   const [mode, setMode] = useState("login");

@@ -4,8 +4,9 @@ import axios from "axios";
 import "./QuestionAnswer.css";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { API_BASE_URL } from "../config";
 
-const API = "http://localhost:5000/api";
+const API = `${API_BASE_URL}/api`;
 
 // Add the login JWT to every protected Express API request.
 function authConfig(extra = {}) {

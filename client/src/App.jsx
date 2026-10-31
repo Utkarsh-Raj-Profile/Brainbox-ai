@@ -4,6 +4,7 @@ import DocumentUpload from "./components/DocumentUpload";
 import QuestionAnswer from "./components/QuestionAnswer";
 import Auth from "./components/Auth.jsx";
 import LandingPage from "./components/LandingPage.jsx";
+import { API_BASE_URL } from "./config";
 
 const API_BASE_URL =
   import.meta.env.VITE_API_URL || "http://localhost:5000";
