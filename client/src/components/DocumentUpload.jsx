@@ -2,9 +2,10 @@
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import "./DocumentUpload.css";
-import { API_BASE_URL } from "../config";
 
-const API = `${API_BASE_URL}/api`;
+const API = `${
+  import.meta.env.VITE_API_URL || "http://localhost:5000"
+}/api`;
 const MAX_FILES = 10;
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
