@@ -5,7 +5,8 @@ import QuestionAnswer from "./components/QuestionAnswer";
 import Auth from "./components/Auth.jsx";
 import LandingPage from "./components/LandingPage.jsx";
 
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 function App() {
   const [backendStatus, setBackendStatus] = useState("Not checked");
