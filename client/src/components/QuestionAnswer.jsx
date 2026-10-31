@@ -5,9 +5,9 @@ import "./QuestionAnswer.css";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-const API_URL = `${
+const API = `${
   import.meta.env.VITE_API_URL || "http://localhost:5000"
-}/api/auth`;
+}/api`;
 
 // Add the login JWT to every protected Express API request.
 function authConfig(extra = {}) {
