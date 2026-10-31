@@ -1,0 +1,50 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Node.js
+node_modules/
+**/node_modules/
+dist/
+build/
+coverage/
+npm-debug.log*
+
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# RAG and AI local data
+.rag_store/
+**/.rag_store/
+models/
+*.faiss
+*.pkl
+
+# Uploaded documents and user data
+uploads/
+**/uploads/
+*.pdf
+*.docx
+
+# Logs and temporary files
+*.log
+logs/
+temp/
+tmp/
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local databases and caches
+*.sqlite
+*.db
+.cache/
