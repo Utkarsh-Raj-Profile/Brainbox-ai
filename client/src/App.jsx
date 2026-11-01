@@ -98,9 +98,9 @@ function App() {
         update: setBackendStatus,
       },
       {
-        url: "http://127.0.0.1:8000/health",
-        update: setAiStatus,
-      },
+  url: "https://brainbox-ai-service.onrender.com/health",
+  update: setAiStatus,
+},
     ];
 
     try {
