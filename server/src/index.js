@@ -14,10 +14,28 @@ dotenv.config();
 const app = express();
 
 const PORT = process.env.PORT || 5000;
-const CLIENT_URL =
-  process.env.CLIENT_URL || "http://localhost:5173";
 
-app.use(cors({ origin: CLIENT_URL }));
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://brainbox-ai-mu.vercel.app",
+  "https://brainbox-crj2qsu8n-utkarshrajcsestudent.vercel.app",
+];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error(`CORS blocked: ${origin}`));
+    },
+    credentials: true,
+  })
+);
+
+app.options(/.*/, cors());
+
 app.use(express.json({ limit: "1mb" }));
 
 app.get("/", (_req, res) => {
